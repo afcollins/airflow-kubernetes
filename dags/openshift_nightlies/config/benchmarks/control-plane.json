@@ -27,6 +27,8 @@
                 "CLEANUP_WHEN_FINISH": "false",
                 "CLEANUP": "true",
                 "MUST_GATHER_EACH_TASK": "true",
+                "E2E_BENCHMARKING_REPO": "https://github.com/afcollins/e2e-benchmarking/",
+                "E2E_BENCHMARKING_BRANCH": "411-crio",
                 "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }"
             }
         }
