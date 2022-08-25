@@ -4,8 +4,6 @@
     "aws_secret_access_key": "",
     "openshift_client_location": "",
     "openshift_install_binary_url": "",
-    "openshift_install_release_image_override": "registry.build05.ci.openshift.org/ci-ln-2kh0ykb/release:latest",
-    "openshift_install_image_registry": "registry.build05.ci.openshift.org",
     "openshift_master_count": 3,
     "openshift_worker_count": 3,
     "openshift_host_prefix": "22",
