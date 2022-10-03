@@ -16,7 +16,7 @@ done
 
 setup(){
     # Clone JetSki playbook
-    git clone --depth=1 --single-branch --branch master https://${SSHKEY_TOKEN}@github.com/redhat-performance/JetSki.git /tmp/JetSki
+    git clone --depth=1 --single-branch --branch disablepubNIC-post_install https://${SSHKEY_TOKEN}@github.com/afcollins/JetSki.git /tmp/JetSki
     pushd /tmp/JetSki
 
     # Clone Perf private keys
