@@ -16,14 +16,27 @@
             "custom_cmd": "kube-burner ocp node-density --uuid=${UUID} --pods-per-node=245 --timeout=2h --pod-ready-threshold=15s --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
         },
         {
-            "name": "node-density-heavy",
-            "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp node-density-heavy --uuid=${UUID} --pods-per-node=245 --timeout=2h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
-        },
-        {
             "name": "node-density-cni",
             "workload": "kube-burner",
             "custom_cmd": "kube-burner ocp node-density-cni --uuid=${UUID} --pods-per-node=245 --timeout=2h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
+        },
+        {
+            "name": "node-density-heavy-150",
+            "workload": "kube-burner",
+            "trigger_rule": "all_done",
+            "custom_cmd": "kube-burner ocp node-density-heavy --uuid=${UUID} --pods-per-node=150 --timeout=2h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner"
+        },
+        {
+            "name": "node-density-heavy-175",
+            "workload": "kube-burner",
+            "trigger_rule": "all_done",
+            "custom_cmd": "kube-burner ocp node-density-heavy --uuid=${UUID} --pods-per-node=175 --timeout=2h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner"
+        },
+        {
+            "name": "node-density-heavy-200",
+            "workload": "kube-burner",
+            "trigger_rule": "all_done",
+            "custom_cmd": "kube-burner ocp node-density-heavy --uuid=${UUID} --pods-per-node=200 --timeout=2h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner"
         },
         {
             "name": "cluster-density-v2",
