@@ -31,6 +31,7 @@ _wait_for_nodes_ready(){
     export KUBECONFIG=./kubeconfig
     # TODO Set worker MCP maxUnavailable to 100%
     # oc patch mcp/worker maxUnavailable=100%
+    # oc patch machineconfigpool worker --type=merge -n openshift-machine-api -p '{"spec": {"maxUnavailable": "100%" }}'
     ALL_READY_ITERATIONS=0
     ITERATIONS=0
     # Node count is number of workers + 3 infra
