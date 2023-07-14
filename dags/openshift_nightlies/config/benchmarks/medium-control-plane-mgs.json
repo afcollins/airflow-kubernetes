@@ -1,14 +1,24 @@
 {
     "benchmarks": [
         {
+            "name": "node-density-warmup",
+            "workload": "kube-burner",
+            "custom_cmd": "kube-burner ocp node-density --uuid=${UUID} --pods-per-node=50 --timeout=3h --pod-ready-threshold=5s --user-metadata=metadata.yml"
+        },
+        {
             "name": "node-density",
             "workload": "kube-burner",
             "custom_cmd": "kube-burner ocp node-density --uuid=${UUID} --pods-per-node=245 --timeout=3h --pod-ready-threshold=5s --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
         },
         {
+            "name": "cluster-density-v2-warmup",
+            "workload": "kube-burner",
+            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --iterations=240 --churn=false --timeout=5h --user-metadata=metadata.yml"
+        },
+        {
             "name": "cluster-density-v2",
             "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --iterations=750 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml --gc=false"
+            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --iterations=1680 --qps=35 --burst=35 --churn-delay=0 --churn-percent=50 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
         }
     ]
 }
