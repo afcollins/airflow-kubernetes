@@ -29,6 +29,8 @@ _get_cluster_status(){
 _wait_for_nodes_ready(){
     _download_kubeconfig "$(_get_cluster_id $1)" ./kubeconfig
     export KUBECONFIG=./kubeconfig
+    # TODO Set worker MCP maxUnavailable to 100%
+    # oc patch mcp/worker maxUnavailable=100%
     ALL_READY_ITERATIONS=0
     ITERATIONS=0
     # Node count is number of workers + 3 infra
