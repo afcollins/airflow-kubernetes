@@ -36,29 +36,24 @@
             "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --iterations=240 --churn=false --user-metadata=metadata.yml"
         },
         {
-            "name": "cluster-density-v2",
+            "name": "cluster-density-v2-1440",
             "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --iterations=1680 --qps=35 --burst=35 --churn-delay=0 --churn-percent=50 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
+            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --iterations=1440 --qps=35 --burst=35 --churn-delay=0 --churn-percent=25 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
         },
         {
-            "name": "node-density-heavy-warmup",
+            "name": "cluster-density-v2-1560",
             "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp node-density-heavy --uuid=${UUID} --pods-per-node=50 --user-metadata=metadata.yml"
+            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --iterations=1560 --qps=35 --burst=35 --churn-delay=0 --churn-percent=25 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
         },
         {
-            "name": "node-density-heavy",
-            "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp node-density-heavy --uuid=${UUID} --pods-per-node=245 --timeout=3h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
-        },
-        {
-            "name": "node-density-cni-warmup",
-            "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp node-density-cni --uuid=${UUID} --pods-per-node=50 --user-metadata=metadata.yml"
-        },
-        {
-            "name": "node-density-cni",
-            "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp node-density-cni --uuid=${UUID} --pods-per-node=245 --timeout=3h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
+            "name": "scale-4",
+            "workload": "scale-perf",
+            "command": "./run_scale_fromgit.sh",
+            "env": {
+                "SCALE": "4",
+                "METADATA_COLLECTION": "false",
+                "WORKLOAD_NODE_ROLE": "worker"
+            }
         }
     ]
 }
