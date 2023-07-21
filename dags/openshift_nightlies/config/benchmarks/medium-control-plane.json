@@ -36,24 +36,14 @@
             "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --qps=35 --burst=35 --iterations=240 --churn=false --user-metadata=metadata.yml"
         },
         {
-            "name": "cluster-density-v2-1440",
-            "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --qps=35 --burst=35 --iterations=1440 --churn-delay=0 --churn-percent=25 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
-        },
-        {
             "name": "cluster-density-v2-1560",
             "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --qps=35 --burst=35 --iterations=1560 --churn-delay=0 --churn-percent=25 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
+            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --iterations=1560 --churn-delay=0 --churn-percent=25 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml" 
         },
         {
-            "name": "cluster-density-v2-1920",
+            "name": "cluster-density-v2-2000",
             "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --qps=35 --burst=35 --iterations=1920 --churn-delay=0 --churn-percent=25 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
-        },
-        {
-            "name": "cluster-density-v2-2400",
-            "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --qps=35 --burst=35 --iterations=2400 --churn-delay=0 --churn-percent=25 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
+            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --iterations=2000 --churn-delay=0 --churn-percent=25 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
         },
         {
             "name": "scale-4",
