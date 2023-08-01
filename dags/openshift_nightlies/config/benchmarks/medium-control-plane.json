@@ -22,23 +22,53 @@
         },
         {
             "name": "node-density-warmup",
-            "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp node-density --uuid=${UUID} --qps=35 --burst=35 --pods-per-node=50 --user-metadata=metadata.yml"
+            "workload": "kube-burner-ocp-wrapper",
+            "command": "./run.sh",
+            "env": {
+                "UUID":"${UUID}",
+                "WORKLOAD": "node-density",
+                "BURST":"35",
+                "QPS":"35",
+                "ES_SERVER": "",
+                "EXTRA_FLAGS": "--user-metadata=metadata.yml --pods-per-node=50"
+            }
         },
         {
             "name": "node-density",
-            "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp node-density --uuid=${UUID} --qps=35 --burst=35 --pods-per-node=245 --timeout=3h --pod-ready-threshold=5s --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
+            "workload": "kube-burner-ocp-wrapper",
+            "command": "./run.sh",
+            "env": {
+                "UUID":"${UUID}",
+                "WORKLOAD": "node-density",
+                "BURST":"35",
+                "QPS":"35",
+                "EXTRA_FLAGS": "--user-metadata=metadata.yml"
+            }
         },
         {
             "name": "cluster-density-v2-warmup",
-            "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --qps=35 --burst=35 --iterations=240 --churn=false --user-metadata=metadata.yml"
+            "workload": "kube-burner-ocp-wrapper",
+            "command": "./run.sh",
+            "env": {
+                "UUID":"${UUID}",
+                "WORKLOAD": "cluster-density-v2",
+                "ITERATIONS": "240",
+                "BURST":"35",
+                "QPS":"35",
+                "ES_SERVER": "",
+                "EXTRA_FLAGS": "--user-metadata=metadata.yml"
+            }
         },
         {
             "name": "cluster-density-v2-1440",
-            "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp cluster-density-v2 --uuid=${UUID} --iterations=1440 --churn-delay=0 --churn-percent=25 --timeout=5h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml" 
+            "workload": "kube-burner-ocp-wrapper",
+            "command": "./run.sh",
+            "env": {
+                "UUID":"${UUID}",
+                "WORKLOAD": "cluster-density-v2",
+                "ITERATIONS": "1440",
+                "EXTRA_FLAGS": "--user-metadata=metadata.yml --churn-delay=0 --churn-percent=25"
+            }
         },
         {
             "name": "scale-4",
