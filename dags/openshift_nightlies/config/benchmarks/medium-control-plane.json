@@ -30,7 +30,7 @@
                 "BURST":"35",
                 "QPS":"35",
                 "ES_SERVER": "",
-                "EXTRA_FLAGS": "--user-metadata=metadata.yml --pods-per-node=50"
+                "EXTRA_FLAGS": " --pods-per-node=50"
             }
         },
         {
@@ -41,8 +41,7 @@
                 "UUID":"${UUID}",
                 "WORKLOAD": "node-density",
                 "BURST":"35",
-                "QPS":"35",
-                "EXTRA_FLAGS": "--user-metadata=metadata.yml"
+                "QPS":"35"
             }
         },
         {
@@ -55,8 +54,7 @@
                 "ITERATIONS": "240",
                 "BURST":"35",
                 "QPS":"35",
-                "ES_SERVER": "",
-                "EXTRA_FLAGS": "--user-metadata=metadata.yml"
+                "ES_SERVER": ""
             }
         },
         {
@@ -67,7 +65,7 @@
                 "UUID":"${UUID}",
                 "WORKLOAD": "cluster-density-v2",
                 "ITERATIONS": "1440",
-                "EXTRA_FLAGS": "--user-metadata=metadata.yml --churn-delay=0 --churn-percent=25"
+                "EXTRA_FLAGS": " --churn-delay=0 --churn-percent=25"
             }
         },
         {
