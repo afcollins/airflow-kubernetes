@@ -54,7 +54,7 @@
                 "ITERATIONS": "240",
                 "BURST":"35",
                 "QPS":"35",
-                "ES_SERVER": ""
+                "ES_SERVER": "--churn=false"
             }
         },
         {
