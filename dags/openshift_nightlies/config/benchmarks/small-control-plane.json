@@ -38,7 +38,7 @@
         {
             "name": "node-density-heavy",
             "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp node-density-heavy --uuid=${UUID} --pods-per-node=245 --timeout=2h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
+            "custom_cmd": "kube-burner ocp node-density-heavy --uuid=${UUID} --pods-per-node=210 --timeout=2h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
         },
         {
             "name": "node-density-cni-warmup",
@@ -48,7 +48,7 @@
         {
             "name": "node-density-cni",
             "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp node-density-cni --uuid=${UUID} --pods-per-node=245 --timeout=2h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
+            "custom_cmd": "kube-burner ocp node-density-cni --uuid=${UUID} --pods-per-node=210 --timeout=2h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
         }
     ]
 }
