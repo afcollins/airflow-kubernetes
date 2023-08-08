@@ -30,6 +30,7 @@
                 "ITERATIONS": "240",
                 "BURST":"35",
                 "QPS":"35",
+                "CHURN":"false",
                 "ES_SERVER": "",
                 "EXTRA_FLAGS": " --churn=false"
             }
