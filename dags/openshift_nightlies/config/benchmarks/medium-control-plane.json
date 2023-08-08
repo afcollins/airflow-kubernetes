@@ -21,30 +21,6 @@
             }
         },
         {
-            "name": "node-density-warmup",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "UUID":"${UUID}",
-                "WORKLOAD": "node-density",
-                "BURST":"35",
-                "QPS":"35",
-                "ES_SERVER": "",
-                "EXTRA_FLAGS": " --pods-per-node=50"
-            }
-        },
-        {
-            "name": "node-density",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "UUID":"${UUID}",
-                "WORKLOAD": "node-density",
-                "BURST":"35",
-                "QPS":"35"
-            }
-        },
-        {
             "name": "cluster-density-v2-warmup",
             "workload": "kube-burner-ocp-wrapper",
             "command": "./run.sh",
@@ -67,6 +43,30 @@
                 "WORKLOAD": "cluster-density-v2",
                 "ITERATIONS": "1440",
                 "EXTRA_FLAGS": " --churn-delay=0 --churn-percent=25"
+            }
+        },
+        {
+            "name": "node-density-warmup",
+            "workload": "kube-burner-ocp-wrapper",
+            "command": "./run.sh",
+            "env": {
+                "UUID":"${UUID}",
+                "WORKLOAD": "node-density",
+                "BURST":"35",
+                "QPS":"35",
+                "ES_SERVER": "",
+                "EXTRA_FLAGS": " --pods-per-node=50"
+            }
+        },
+        {
+            "name": "node-density",
+            "workload": "kube-burner-ocp-wrapper",
+            "command": "./run.sh",
+            "env": {
+                "UUID":"${UUID}",
+                "WORKLOAD": "node-density",
+                "BURST":"35",
+                "QPS":"35"
             }
         },
         {
