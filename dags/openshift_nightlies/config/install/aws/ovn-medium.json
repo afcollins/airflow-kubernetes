@@ -1,6 +1,6 @@
 {
-    "openshift_client_location": "http://ec2-54-212-114-216.us-west-2.compute.amazonaws.com:7070/index/afcollins/binaries/openshift-client-linux-4.14.0-0.ci.test-2023-08-07-161725-ci-ln-7405nfb-latest.tar.gz",
-    "openshift_install_binary_url": "http://ec2-54-212-114-216.us-west-2.compute.amazonaws.com:7070/index/afcollins/binaries/openshift-install-linux-4.14.0-0.ci.test-2023-08-07-161725-ci-ln-7405nfb-latest.tar.gz",
+    "openshift_client_location": "http://ec2-54-212-114-216.us-west-2.compute.amazonaws.com:7070/index/afcollins/binaries/openshift-client-linux-4.14.0-0.ci.test-2023-08-08-145605-ci-ln-974w91b-latest.tar.gz",
+    "openshift_install_binary_url": "http://ec2-54-212-114-216.us-west-2.compute.amazonaws.com:7070/index/afcollins/binaries/openshift-install-linux-4.14.0-0.ci.test-2023-08-08-145605-ci-ln-974w91b-latest.tar.gz",
     "openshift_master_count": 3,
     "openshift_worker_count": 3,
     "openshift_host_prefix": "22",
