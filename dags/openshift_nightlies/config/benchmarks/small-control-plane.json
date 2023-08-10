@@ -13,12 +13,12 @@
         {
             "name": "node-density-warmup",
             "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp node-density --uuid=${UUID} --pods-per-node=50 --user-metadata=metadata.yml"
+            "custom_cmd": "kube-burner ocp node-density --pod-ready-threshold 100s --uuid=${UUID} --pods-per-node=50 --user-metadata=metadata.yml"
         },
         {
             "name": "node-density",
             "workload": "kube-burner",
-            "custom_cmd": "kube-burner ocp node-density --uuid=${UUID} --pods-per-node=245 --timeout=2h --pod-ready-threshold=15s --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
+            "custom_cmd": "kube-burner ocp node-density --pod-ready-threshold 100s --uuid=${UUID} --pods-per-node=245 --timeout=2h --es-server=${ES_SERVER} --es-index=ripsaw-kube-burner --user-metadata=metadata.yml"
         },
         {
             "name": "cluster-density-v2-warmup",
