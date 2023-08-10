@@ -34,19 +34,6 @@
             }
         },
         {
-            "name": "node-density-cni-150",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "UUID":"${UUID}",
-                "WORKLOAD": "node-density-cni",
-                "BURST":"35",
-                "QPS":"35",
-                "ES_SERVER": "https://search-perfscale-dev-chmf5l4sh66lvxbnadi4bznl3a.us-west-2.es.amazonaws.com",
-                "EXTRA_FLAGS": "--pods-per-node=150"
-            }
-        },
-        {
             "name": "node-density-cni-175",
             "workload": "kube-burner-ocp-wrapper",
             "command": "./run.sh",
@@ -83,19 +70,6 @@
                 "QPS":"35",
                 "ES_SERVER": "https://search-perfscale-dev-chmf5l4sh66lvxbnadi4bznl3a.us-west-2.es.amazonaws.com",
                 "EXTRA_FLAGS": "--pods-per-node=50"
-            }
-        },
-        {
-            "name": "node-density-heavy-150",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "UUID":"${UUID}",
-                "WORKLOAD": "node-density-heavy",
-                "BURST":"35",
-                "QPS":"35",
-                "ES_SERVER": "https://search-perfscale-dev-chmf5l4sh66lvxbnadi4bznl3a.us-west-2.es.amazonaws.com",
-                "EXTRA_FLAGS": "--pods-per-node=150"
             }
         },
         {
