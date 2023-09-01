@@ -1,6 +1,6 @@
 {
-    "openshift_client_location":    "https://openshift-release-artifacts.apps.ci.l2s4.p1.openshiftapps.com/4.14.0-0.nightly-2023-08-31-084426/openshift-client-linux-4.14.0-0.nightly-2023-08-31-084426.tar.gz",
-    "openshift_install_binary_url": "https://openshift-release-artifacts.apps.ci.l2s4.p1.openshiftapps.com/4.14.0-0.nightly-2023-08-31-084426/openshift-install-linux-4.14.0-0.nightly-2023-08-31-084426.tar.gz",
+    "openshift_client_location":    "http://ec2-54-212-114-216.us-west-2.compute.amazonaws.com:7070/index/afcollins/binaries/openshift-client-linux-4.14.0-0.ci.test-2023-09-01-145457-ci-ln-lsjyt2k-latest.tar.gz",
+    "openshift_install_binary_url": "http://ec2-54-212-114-216.us-west-2.compute.amazonaws.com:7070/index/afcollins/binaries/openshift-install-linux-4.14.0-0.ci.test-2023-09-01-145457-ci-ln-lsjyt2k-latest.tar.gz",
     "openshift_master_count": 3,
     "openshift_worker_count": 3,
     "openshift_host_prefix": "22",
