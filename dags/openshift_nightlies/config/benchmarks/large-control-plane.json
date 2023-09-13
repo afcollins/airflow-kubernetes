@@ -46,7 +46,7 @@
             }
         },
         {
-            "name": "cluster-density-v2-1512",
+            "name": "cluster-density-v2-2268",
             "workload": "kube-burner-ocp-wrapper",
             "command": "./run.sh",
             "env": {
@@ -55,24 +55,7 @@
                 "BURST":"20",
                 "QPS":"20",
                 "ES_SERVER": "https://search-perfscale-dev-chmf5l4sh66lvxbnadi4bznl3a.us-west-2.es.amazonaws.com",
-                "ITERATIONS": "1512",
-                "CHURN": "true",
-                "EXTRA_FLAGS": "--churn-duration=1m --churn-percent=100 --churn-delay=0s"
-            }
-        },
-        {
-            "name": "cluster-density-v2-2016",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "UUID":"${UUID}",
-                "WORKLOAD": "cluster-density-v2",
-                "BURST":"20",
-                "QPS":"20",
-                "ES_SERVER": "https://search-perfscale-dev-chmf5l4sh66lvxbnadi4bznl3a.us-west-2.es.amazonaws.com",
-                "ITERATIONS": "2016",
-                "CHURN": "true",
-                "EXTRA_FLAGS": "--churn-duration=1m --churn-percent=100 --churn-delay=0s"
+                "ITERATIONS": "2268"
             }
         },
         {
@@ -85,9 +68,7 @@
                 "BURST":"20",
                 "QPS":"20",
                 "ES_SERVER": "https://search-perfscale-dev-chmf5l4sh66lvxbnadi4bznl3a.us-west-2.es.amazonaws.com",
-                "ITERATIONS": "3024",
-                "CHURN": "true",
-                "EXTRA_FLAGS": "--churn-duration=1m --churn-percent=100 --churn-delay=0s"
+                "ITERATIONS": "3024"
             }
         },
         {
