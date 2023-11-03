@@ -70,9 +70,7 @@ class AbstractOpenshiftInstaller(ABC):
         raise NotImplementedError()
 
     def get_install_task(self):
-        indexer = StatusIndexer(self.dag, self.dag_config, self.release, "install").get_index_task()
         install_task = self._get_task(operation="install")
-        install_task >> indexer
         return install_task
 
     def get_cleanup_task(self):

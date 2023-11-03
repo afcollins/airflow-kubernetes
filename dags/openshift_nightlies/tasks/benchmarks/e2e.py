@@ -145,10 +145,6 @@ class E2EBenchmarks():
                 benchmarks[index] = self._get_benchmarks(benchmark['benchmarks'])
         return benchmarks
 
-    def _add_indexer(self, benchmark):
-        indexer = StatusIndexer(self.dag, self.dag_config, self.release, benchmark.task_id, task_group=self.task_group).get_index_task()
-        benchmark >> indexer
-
     def _get_benchmark(self, benchmark):
         env = {**self.env, **benchmark.get('env', {}), **{"ES_SERVER": var_loader.get_secret('elasticsearch'), "KUBEADMIN_PASSWORD": environ.get("KUBEADMIN_PASSWORD", "")}}
         # Fetch variables from a secret with the name <DAG_NAME>-<TASK_NAME>
@@ -176,7 +172,6 @@ class E2EBenchmarks():
                 execution_timeout=timedelta(seconds=21600),
                 executor_config=self.exec_config
         )
-        self._add_indexer(task)
         return task
 
     # This Helper Injects Airflow environment variables into the task execution runtime
