@@ -1,11 +1,11 @@
 {
     "benchmarks": [
         {
-            "name": "scale-24",
+            "name": "scale-6",
             "workload": "scale-perf",
             "command": "./run_scale_fromgit.sh",
             "env": {
-                "SCALE": "24",
+                "SCALE": "6",
                 "METADATA_COLLECTION": "true",
                 "WORKLOAD_NODE_ROLE": "worker"
             }
@@ -15,26 +15,9 @@
             "workload": "kube-burner-ocp-wrapper",
             "command": "./run.sh",
             "env": {
+                "ES_SERVER": "",
                 "WORKLOAD": "node-density",
-                "EXTRA_FLAGS": "--pod-ready-threshold=15s --timeout=2h"
-            }
-        },
-        {
-            "name": "node-density-heavy",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "node-density-heavy",
-                "EXTRA_FLAGS": "--timeout=2h"
-            }
-        },
-        {
-            "name": "node-density-cni",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "node-density-cni",
-                "EXTRA_FLAGS": "--timeout=2h"
+                "EXTRA_FLAGS": "--pod-ready-threshold=60s --timeout=2h"
             }
         },
         {
@@ -42,9 +25,31 @@
             "workload": "kube-burner-ocp-wrapper",
             "command": "./run.sh",
             "env": {
+                "ES_SERVER": "",
                 "WORKLOAD": "cluster-density-v2",
-                "ITERATIONS": "216",
+                "ITERATIONS": "54",
+                "CHURN": "false",
                 "EXTRA_FLAGS": "--timeout=3h"
+            }
+        },
+        {
+            "name": "node-density-heavy",
+            "workload": "kube-burner-ocp-wrapper",
+            "command": "./run.sh",
+            "env": {
+                "ES_SERVER": "",
+                "WORKLOAD": "node-density-heavy",
+                "EXTRA_FLAGS": "--timeout=2h --pods-per-node=150"
+            }
+        },
+        {
+            "name": "node-density-cni",
+            "workload": "kube-burner-ocp-wrapper",
+            "command": "./run.sh",
+            "env": {
+                "ES_SERVER": "",
+                "WORKLOAD": "node-density-cni",
+                "EXTRA_FLAGS": "--timeout=2h  --pods-per-node=150"
             }
         }
     ]
