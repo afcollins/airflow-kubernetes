@@ -26,8 +26,6 @@
             "command": "./run.sh",
             "env": {
                 "ES_SERVER": "",
-                "QPS": "10",
-                "BURST": "10",
                 "WORKLOAD": "cluster-density-v2",
                 "ITERATIONS": "54",
                 "CHURN": "false",
