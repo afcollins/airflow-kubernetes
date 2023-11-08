@@ -16,8 +16,6 @@
             "command": "./run.sh",
             "env": {
                 "ES_SERVER": "",
-                "QPS": "10",
-                "BURST": "10",
                 "WORKLOAD": "node-density",
                 "EXTRA_FLAGS": "--pod-ready-threshold=60s --timeout=2h"
             }
@@ -42,10 +40,10 @@
             "command": "./run.sh",
             "env": {
                 "ES_SERVER": "",
-                "QPS": "10",
-                "BURST": "10",
+                "QPS": "20",
+                "BURST": "20",
                 "WORKLOAD": "node-density-heavy",
-                "EXTRA_FLAGS": "--timeout=2h --pods-per-node=150"
+                "EXTRA_FLAGS": "--timeout=2h --pods-per-node=210"
             }
         },
         {
@@ -54,10 +52,10 @@
             "command": "./run.sh",
             "env": {
                 "ES_SERVER": "",
-                "QPS": "10",
-                "BURST": "10",
+                "QPS": "20",
+                "BURST": "20",
                 "WORKLOAD": "node-density-cni",
-                "EXTRA_FLAGS": "--timeout=2h  --pods-per-node=150"
+                "EXTRA_FLAGS": "--timeout=2h  --pods-per-node=210"
             }
         }
     ]
