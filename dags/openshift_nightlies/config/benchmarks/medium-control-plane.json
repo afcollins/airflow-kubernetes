@@ -27,9 +27,9 @@
             "env": {
                 "ES_SERVER": "",
                 "WORKLOAD": "cluster-density-v2",
-                "ITERATIONS": "54",
+                "ITERATIONS": "108",
                 "CHURN": "true",
-                "EXTRA_FLAGS": "--timeout=3h --churn-duration=20m"
+                "EXTRA_FLAGS": "--timeout=3h"
             }
         },
         {
