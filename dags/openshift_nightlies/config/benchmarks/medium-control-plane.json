@@ -29,7 +29,7 @@
                 "WORKLOAD": "cluster-density-v2",
                 "ITERATIONS": "90",
                 "CHURN": "true",
-                "EXTRA_FLAGS": "--timeout=3h"
+                "EXTRA_FLAGS": "--timeout=3h --churn-duration=20m"
             }
         },
         {
