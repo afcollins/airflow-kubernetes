@@ -27,7 +27,7 @@
             "env": {
                 "ES_SERVER": "",
                 "WORKLOAD": "cluster-density-v2",
-                "ITERATIONS": "108",
+                "ITERATIONS": "90",
                 "CHURN": "true",
                 "EXTRA_FLAGS": "--timeout=3h"
             }
