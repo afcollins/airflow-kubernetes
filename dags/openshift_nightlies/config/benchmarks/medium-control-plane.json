@@ -28,8 +28,8 @@
                 "ES_SERVER": "",
                 "WORKLOAD": "cluster-density-v2",
                 "ITERATIONS": "54",
-                "CHURN": "false",
-                "EXTRA_FLAGS": "--timeout=3h"
+                "CHURN": "true",
+                "EXTRA_FLAGS": "--timeout=3h --churn-duration=20m"
             }
         },
         {
