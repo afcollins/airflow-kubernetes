@@ -41,7 +41,7 @@
                 "QPS": "20",
                 "BURST": "20",
                 "WORKLOAD": "node-density-heavy",
-                "EXTRA_FLAGS": "--timeout=2h --pods-per-node=200 --iterations-per-namespace=100"
+                "EXTRA_FLAGS": "--timeout=2h --pods-per-node=200"
             }
         },
         {
@@ -53,7 +53,7 @@
                 "QPS": "20",
                 "BURST": "20",
                 "WORKLOAD": "node-density-cni",
-                "EXTRA_FLAGS": "--timeout=2h --pods-per-node=200 --iterations-per-namespace=100"
+                "EXTRA_FLAGS": "--timeout=2h --pods-per-node=200"
             }
         }
     ]
