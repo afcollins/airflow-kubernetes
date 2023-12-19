@@ -16,8 +16,8 @@
             "command": "./run.sh",
             "env": {
                 "ES_SERVER": "",
-                "QPS": "20",
-                "BURST": "20",
+                "QPS": "80",
+                "BURST": "80",
                 "WORKLOAD": "node-density-heavy",
                 "EXTRA_FLAGS": "--timeout=2h --pods-per-node=200"
             }
@@ -28,8 +28,8 @@
             "command": "./run.sh",
             "env": {
                 "ES_SERVER": "",
-                "QPS": "20",
-                "BURST": "20",
+                "QPS": "80",
+                "BURST": "80",
                 "WORKLOAD": "node-density-heavy",
                 "EXTRA_FLAGS": "--timeout=2h --pods-per-node=200 --iterations-per-namespace=100"
             }
