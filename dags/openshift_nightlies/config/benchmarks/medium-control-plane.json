@@ -11,29 +11,7 @@
             }
         },
         {
-            "name": "node-density",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "ES_SERVER": "",
-                "WORKLOAD": "node-density",
-                "EXTRA_FLAGS": "--pod-ready-threshold=60s --timeout=2h"
-            }
-        },
-        {
-            "name": "cluster-density-v2",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "ES_SERVER": "",
-                "WORKLOAD": "cluster-density-v2",
-                "ITERATIONS": "90",
-                "CHURN": "true",
-                "EXTRA_FLAGS": "--timeout=3h --churn-duration=20m"
-            }
-        },
-        {
-            "name": "node-density-heavy",
+            "name": "node-density-heavy-1000itsPerNs",
             "workload": "kube-burner-ocp-wrapper",
             "command": "./run.sh",
             "env": {
@@ -45,15 +23,15 @@
             }
         },
         {
-            "name": "node-density-cni",
+            "name": "node-density-heavy-100itsPerNs",
             "workload": "kube-burner-ocp-wrapper",
             "command": "./run.sh",
             "env": {
                 "ES_SERVER": "",
                 "QPS": "20",
                 "BURST": "20",
-                "WORKLOAD": "node-density-cni",
-                "EXTRA_FLAGS": "--timeout=2h --pods-per-node=200"
+                "WORKLOAD": "node-density-heavy",
+                "EXTRA_FLAGS": "--timeout=2h --pods-per-node=200 --iterations-per-namespace=100"
             }
         }
     ]
