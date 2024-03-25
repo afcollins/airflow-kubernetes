@@ -1,17 +1,8 @@
 versions:
-  - version: "4.12"
-    alias: stable
-    releaseStream: 4.12.0-0.nightly
-    baremetalReleaseStream: latest-4.12
-  - version: "4.13"
+  - version: "4.16"
     alias: next
-    releaseStream: 4.13.0-0.nightly
-    baremetalReleaseStream: latest-4.13
-  - version: "4.14"
-    alias: future
-    releaseStream: 4.14.0-0.nightly
-    baremetalReleaseStream: latest-4.14
-
+    releaseStream: 4.16.0-0.nightly
+    baremetalReleaseStream: latest-4.16
 
 dagConfig:
   schedules:
@@ -29,9 +20,8 @@ dagConfig:
 
 platforms:
   cloud:
-    versions: ["4.12", "4.13", "4.14"]
+    versions: ["4.16"]
     providers: ["aws"]
-    #providers: ["aws", "aws-arm", "azure","gcp"]
     variants:
     - name: ovn-small-cp
       schedule: "0 12 * * 3"
@@ -53,99 +43,6 @@ platforms:
       config:
         install: ovn-dp-v2.json
         benchmarks: data-plane-v2.json
-
-          # Removing old dp tests and ACS as we don't use them in the main dag
-          #    - name: ovn-data-plane
-          #      config:
-          #        install: ovn-dp.json
-          #        benchmarks: data-plane.json
-          #    - name: acs
-          #      config: 
-          #        install: acs.json
-          #        benchmarks: acs.json
-
-          #Disabling Baremetal as we don't use it in the main dag.
-          #  baremetal:
-          #    build: dev
-          #    versions: ["4.11", "4.12", "4.13"]
-          #    variants:
-          #      - name: jetski
-          #        config:
-          #          install: baremetal/jetski.json
-          #          benchmarks: baremetal-benchmarks
-
-  # Do not program concurrent builds of ROSA/ROGCP/ARO
-  rosa:
-    versions: ["4.12", "4.13"]
-    variants:
-      - name: sts-ovn-small-cp
-        schedule: "0 12 * * 3"
-        config:
-          install: rosa/ovn-small.json
-          benchmarks: small-control-plane-mgs.json
-      - name: sts-ovn-medium-cp
-        schedule: "5 12 * * 1"
-        config:
-          install: rosa/ovn-medium.json
-          benchmarks: medium-control-plane-mgs.json
-      - name: sts-ovn-large-cp
-        schedule: "10 12 * * 3"
-        config:
-          install: rosa/ovn-large.json
-          benchmarks: large-control-plane-mgs.json
-      - name: sts-ovn-data-plane
-        schedule: "10 12 * * 3"
-        config:
-          install: rosa/ovn-small-dp.json
-          benchmarks: data-plane-mgs.json
-      - name: iam-ovn-control-plane
-        schedule: "None"
-        config:
-          install: rosa/iam-ovn.json
-          benchmarks: control-plane.json
-      - name: ocm-api-load
-        schedule: "None"
-        config:
-          install: rosa/ocm.json
-          benchmarks: ocm-api-load.json
-      - name: rosa-upgrade
-        schedule: "20 12 * * 3"
-        config:
-          install: rosa/upgrade.json
-          benchmarks: upgrade.json
-
-  rosahcp:
-    versions: ["4.12", "4.13"]
-    variants:
-      - name: p75-control-plane
-        schedule:  "0 12 * * 3"
-        config:
-          install: rosa-hcp/p75-control-plane.json
-          benchmarks: hosted-control-plane-p75.json
-      - name: data-plane-v2
-        schedule:  "1 12 * * 3"
-        config:
-          install: rosa-hcp/data-plane.json
-          benchmarks: data-plane-v2.json
-      - name: small-control-plane
-        schedule:  "2 12 * * 3"
-        config:
-          install: rosa-hcp/small-control-plane.json
-          benchmarks: hcp-small-control-plane.json
-
-  rogcp:
-    versions: ["4.12", "4.13"]
-    variants:
-      - name: ovn-control-plane
-        schedule: "10 13 * * 1"
-        config:
-          install: rogcp/ovn.json
-          benchmarks: small-control-plane-mgs.json
-      - name: ovn-data-plane
-        schedule: "40 13 * * 1"
-        config:
-          install: rogcp/ovn.json
-          benchmarks: data-plane-mgs.json
 
   prebuilt:
     versions: ["4.x"]
