@@ -1,50 +1,13 @@
 {
     "benchmarks": [
         {
-            "name": "scale-24",
+            "name": "scale-3",
             "workload": "scale-perf",
             "command": "./run_scale_fromgit.sh",
             "env": {
-                "SCALE": "24",
-                "METADATA_COLLECTION": "true",
+                "SCALE": "3",
+                "METADATA_COLLECTION": "false",
                 "WORKLOAD_NODE_ROLE": "worker"
-            }
-        },
-        {
-            "name": "node-density",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "node-density",
-                "EXTRA_FLAGS": "--pod-ready-threshold=15s --timeout=2h"
-            }
-        },
-        {
-            "name": "node-density-heavy",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "node-density-heavy",
-                "EXTRA_FLAGS": "--timeout=2h"
-            }
-        },
-        {
-            "name": "node-density-cni",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "node-density-cni",
-                "EXTRA_FLAGS": "--timeout=2h"
-            }
-        },
-        {
-            "name": "cluster-density-v2",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "cluster-density-v2",
-                "ITERATIONS": "216",
-                "EXTRA_FLAGS": "--timeout=3h"
             }
         }
     ]
