@@ -22,5 +22,6 @@
     "openshift_prometheus_storage_class": "gp3-csi",
     "openshift_prometheus_storage_size": "50Gi",
     "openshift_alertmanager_storage_class": "gp3-csi",
-    "openshift_alertmanager_storage_size": "2Gi"
+    "openshift_alertmanager_storage_size": "2Gi",
+    "openshift_toggle_workload_node": "true"
  }
