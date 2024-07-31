@@ -1,4 +1,8 @@
 versions:
+  - version: "4.15"
+    alias: full
+    releaseStream: 4.15.0-0.nightly
+    baremetalReleaseStream: latest-4.15
   - version: "4.16"
     alias: next
     releaseStream: 4.16.0-0.nightly
@@ -20,7 +24,7 @@ dagConfig:
 
 platforms:
   cloud:
-    versions: ["4.16"]
+    versions: ["4.15","4.16"]
     providers: ["aws"]
     variants:
     - name: ovn-small-cp
