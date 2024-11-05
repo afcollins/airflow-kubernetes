@@ -11,7 +11,10 @@ versions:
     alias: future
     releaseStream: 4.17.0-0.nightly
     baremetalReleaseStream: latest-4.17
-
+  - version: "4.18"
+    alias: future
+    releaseStream: 4.18.0-0.nightly
+    baremetalReleaseStream: latest-4.18
 
 dagConfig:
   schedules:
@@ -29,9 +32,8 @@ dagConfig:
 
 platforms:
   cloud:
-    versions: ["4.15", "4.16", "4.17"]
+    versions: ["4.17", "4.18"]
     providers: ["aws"]
-    #providers: ["aws", "aws-arm", "azure","gcp"]
     variants:
     - name: ovn-small-cp
       schedule: "0 12 * * 3"

@@ -29,25 +29,6 @@
                 "METADATA_COLLECTION": "false",
                 "WORKLOAD_NODE_ROLE": "worker"
             }
-        },
-        {
-            "name": "node-density",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "node-density",
-                "EXTRA_FLAGS": "--pod-ready-threshold=10s"
-            }
-        },
-        {
-            "name": "cluster-density-v2",
-            "workload": "kube-burner-ocp-wrapper",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "cluster-density-v2",
-                "ITERATIONS": "2268",
-                "EXTRA_FLAGS": "--timeout=6h"
-            }
         }
     ]
 }
